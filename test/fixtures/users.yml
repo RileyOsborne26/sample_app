@@ -2,9 +2,10 @@
 
 # NEED STARTING AT CHAPTER 8
 
-#one:
-#  name: MyString
-#  email: MyString
+riley:
+  name: Riley Osborne
+  email: rwosborne@csustudent.net
+  password_digest: <%= User.digest('password') %>
 
 #two:
 #  name: MyString
