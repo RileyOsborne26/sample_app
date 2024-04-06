@@ -6,7 +6,16 @@ riley:
   name: Riley Osborne
   email: rwosborne@csustudent.net
   password_digest: <%= User.digest('password') %>
+  admin: true
 
-#two:
-#  name: MyString
-#  email: MyString
+mary:
+  name: Mary Inabinet
+  email: mlinabinet@girlfriend.net
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
