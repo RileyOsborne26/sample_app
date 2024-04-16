@@ -1,16 +1,13 @@
-# fly.toml app configuration file generated for sample-app-riley on 2024-02-02T20:28:14-05:00
+# fly.toml app configuration file generated for ui-project-app on 2024-04-13T19:41:42-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'sample-app-riley'
+app = 'ui-project-app'
 primary_region = 'atl'
 console_command = '/rails/bin/rails console'
 
 [build]
-
-[deploy]
-  release_command = './bin/rails db:prepare'
 
 [http_service]
   internal_port = 3000
@@ -21,10 +18,6 @@ console_command = '/rails/bin/rails console'
   processes = ['app']
 
 [[vm]]
+  memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024
-
-[[statics]]
-  guest_path = '/rails/public'
-  url_prefix = '/'

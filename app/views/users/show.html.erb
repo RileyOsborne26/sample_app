@@ -1,8 +1,9 @@
 <% provide(:title, @user.name) %>
 <div class="row">
+  <h1>Exclusive Content</h1>
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
+      <h1>Profile Info:</h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
@@ -15,3 +16,100 @@
 User created at <%= @user.created_at %>, updated at <%= @user.updated_at %>
 <br>
 Current Time: <%= Time.now %> 
+<br>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="map_info">
+      <h1>Race Map:</h1>
+      <%= image_tag("fiveKmap.png", alt: "Race Map", width: "650") %>
+      <div class="centered">The green dots mark the 1k, 2k, 3k, and 4k mile markers</div>
+    </section>
+  </aside>
+</div>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="schedule_info">
+      <h1>Race Day Schedule:</h1>
+      <table>
+        <tr>
+          <th>Time (am)</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>6:00</td>
+          <td>External Transportation to the Race Opens</td>
+        </tr>
+        <tr>
+          <td>7:15-7:45</td>
+          <td>Race Sign-in Time</td>
+        </tr>
+        <tr>
+          <td>8:15-8:25</td>
+          <td>Pre-race Cerimonies</td>
+        </tr>
+        <tr>
+          <td>8:30</td>
+          <td>Race Start</td>
+        </tr>
+        <tr>
+          <td>9:45-10:00</td>
+          <td>Post-race Sponsers Speech</td>
+        </tr>
+        <tr>
+          <td>10:00-10:20</td>
+          <td>Post-race Awards</td>
+        </tr>
+        <tr>
+          <td>10:00</td>
+          <td>Race Ends (clear the roads)</td>
+        </tr>
+        <tr>
+          <td>11:30 am</td>
+          <td>Race Transportation from the Race Closes</td>
+        </tr>
+      </table>
+    </section>
+  </aside>
+</div>
+
+<br>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="detailed_info">
+      <h1>Parking, Transportation, and Festivities Map:</h1>
+      <br></br>
+      <h1>Start Line Map:</h1>
+      <p>Race Start Address:</p>
+      <p class="address">951 Crowfield Blvd,</p>
+      <p class="address">Goose Creek, SC 29445</p>
+      <%= image_tag("park_start.png", alt: "Start Map", width: "300") %>
+      <p style="color:red">P = available parking</p>
+      <br></br>
+      <h1>Finish Line Map:</h1>
+      <%= image_tag("park_finish.png", alt: "Finish Map", width: "500") %>
+    </section>
+  </aside>
+</div>
+
+<br>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="team_info">
+      <h1>User Team Info:</h1>
+      <table>
+        <tr>
+          <th>Runner</th>
+          <th>Team Name</th>
+        </tr>
+        <tr>
+          <td>
+            <%= link_to @user.name, @user %>
+          </td>
+          <td><%= link_to @user.name, @user %></td>
+        </tr>
+      </table>
+    </section>
+  </aside>
+</div>
