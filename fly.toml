@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'sample-app-riley'
+app = 'footballcard-app'
 primary_region = 'atl'
 console_command = '/rails/bin/rails console'
 
@@ -21,9 +21,9 @@ console_command = '/rails/bin/rails console'
   processes = ['app']
 
 [[vm]]
+  memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024
 
 [[statics]]
   guest_path = '/rails/public'
